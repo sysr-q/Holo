@@ -3,6 +3,8 @@ div#globalMessage, form[action="https://sys.4chan.org/g/post"] {
 	display: none !important;
 }
 
+/*--- STYLISATION ---*/
+
 /* Sorry, J-List, no ads for you. */
 div.topad, div.middlead, div.bottomad {
 	display: none !important;
@@ -13,11 +15,17 @@ hr.abovePostForm {
 	display: none;
 }
 
-/* Full width the board, center the thread. */
+/* Ugly and redundant. We know we're replying, jerk! */
+div.postingMode.desktop {
+	display: none;
+}
+
+/* Full width the board, allowing us to center the thread. */
 form#delform > div.board {
 	width: 100%;
 }
 
+/* Center the thread with some margin magic. */
 div.board > div.thread {
 	width: 800px;
 	margin-left: auto;
@@ -29,16 +37,46 @@ div.thread > div.postContainer.opContainer > div.op {
 	display: block;
 }
 
+div.thread > div.postContainer.opContainer > div.post.op {
+	margin: 0 auto;
+	padding: 0;
+}
+
 /* Full width our replies */
 div.thread > div.postContainer.replyContainer > div.post.reply {
 	width: 100%;
 	margin: 0 auto;
-	border-left: 1px #FFFFFF solid;
-	border-right: 1px #FFFFFF solid;
-	border-bottom: 1px #FFFFFF solid;
+	padding: 0;
 }
 
 /* We don't want those arrows. */
 div.thread > div.postContainer.replyContainer > div.sideArrows {
 	display: none;
+}
+
+/*--- STYLISATION ---*/
+
+/*--- COLOURATION ---*/
+
+/* A nice white background for the page. */
+body {
+	background-color: #FCFCFC;
+	background-image: none;
+}
+
+div.thread {
+	border: 1px #7F7F7F solid;
+}
+
+div.thread > div.postContainer.opContainer > div.post.op {
+	background-color: #FAFAFA;
+}
+
+div.thread > div.postContainer.replyContainer > div.post.reply {
+	background-color: #FAFAFA;
+	border-style: none;
+}
+
+div.thread > div.postContainer.replyContainer:last-child > div.post.reply {
+	/* Last reply */
 }

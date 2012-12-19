@@ -1,0 +1,44 @@
+/* temp so editing css is easier */
+div#globalMessage, form[action="https://sys.4chan.org/g/post"] {
+	display: none !important;
+}
+
+/* Sorry, J-List, no ads for you. */
+div.topad, div.middlead, div.bottomad {
+	display: none !important;
+}
+
+/* Useless if we hide ads. */
+hr.abovePostForm {
+	display: none;
+}
+
+/* Full width the board, center the thread. */
+form#delform > div.board {
+	width: 100%;
+}
+
+div.board > div.thread {
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Make the OP push the replies underneath. */
+div.thread > div.postContainer.opContainer > div.op {
+	display: block;
+}
+
+/* Full width our replies */
+div.thread > div.postContainer.replyContainer > div.post.reply {
+	width: 100%;
+	margin: 0 auto;
+	border-left: 1px #FFFFFF solid;
+	border-right: 1px #FFFFFF solid;
+	border-bottom: 1px #FFFFFF solid;
+}
+
+/* We don't want those arrows. */
+div.thread > div.postContainer.replyContainer > div.sideArrows {
+	display: none;
+}

@@ -1,5 +1,5 @@
 /* temp so editing css is easier */
-div#globalMessage, form[action="https://sys.4chan.org/g/post"] {
+div#globalMessage /*, form[action="https://sys.4chan.org/g/post"]*/ {
 	display: none !important;
 }
 
@@ -152,11 +152,14 @@ div.thread > div.postContainer.replyContainer > div.sideArrows {
 	display: none;
 }
 
-div.thread > div.postContainer.replyContainer > div.post.reply.newPostsMarker {
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	border-top: 2px solid #FF0000;
+/* Post form, oh lawd. */
+form[name^="post"] {
+	margin-top: 30px;
+	display: block;
+	position: fixed;
+	width: 300px;
+	top: 0px;
+	left: 0px;
 }
 
 /*---/STYLISATION/---*/
@@ -182,6 +185,21 @@ div.thread > div.postContainer.replyContainer > div.post.reply {
 	border-style: none;
 }
 
+div.thread > div.postContainer.replyContainer > div.post.reply.highlight {
+	background-color: #d2d2d2 !important;
+}
+
+div.thread > div.postContainer.replyContainer > div.post.reply.deleted {
+	/* Deleted reply, what do. */
+}
+
 div.thread > div.postContainer.replyContainer:last-child > div.post.reply {
 	/* Last reply */
+}
+
+div.thread > div.postContainer.replyContainer > div.post.reply.newPostsMarker {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	border-bottom: 2px solid #FF0000;
 }

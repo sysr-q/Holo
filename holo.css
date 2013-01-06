@@ -6,12 +6,110 @@ div#globalMessage, form[action="https://sys.4chan.org/g/post"] {
 /*--- STYLISATION ---*/
 
 /* Sorry, J-List, no ads for you. */
-div.topad, div.middlead, div.bottomad {
+div.topad, div.middlead, div.bottomad, 
+div#absbot,
+div#boardNavDesktopFoot,
+div.navLinks.navLinksBot,
+div.board > hr,
+div.boardBanner > img {
 	display: none !important;
+}
+
+/* Bump the banner down, to adjust for the 
+   floating top nav bar. */
+div.boardBanner {
+	margin-top: 30px;
+}
+
+/* These two just align the fucking checkbox. */
+div.navLinks.desktop > label {
+	display: inline-block;
+	white-space: nowrap;
+	padding-right: 2px;
+}
+div.navLinks.desktop > label > input[type="checkbox"] {
+	vertical-align: middle;
+}
+/* align hacks ^ */
+
+/* Float the [Return] [Catalog] etc stuff up the top. */
+div.navLinks.desktop {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+
+	z-index: 100;
+
+	background-color: rgba(250, 250, 250, 0.90);
+	border-bottom: 1px solid #000000;
+	color: #000000;
+
+	padding: 4px 5px 4px 5px;
+}
+
+/* Float our board list on the bottom of the page. */
+div#boardNavDesktop {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+
+	z-index: 100;
+
+	background-color: rgba(250, 250, 250, 0.90);
+	border-bottom: 1px solid #000000;
+	color: #000000;
+
+	padding: 0px 5px 4px 5px;	
+}
+
+/* "[Settings] [Home]" can go bottom right. */
+span#navtopright {
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	z-index: 101;
+	padding-bottom: 4px;
+	padding-right: 4px;
+}
+
+/* Page numbers up the top. */
+div.pagelist.desktop {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+
+	z-index: 101;
+
+	background-color: rgba(250, 250, 250, 0.90);
+	border-bottom: 1px solid #000000;
+	color: #000000;
+
+	padding: 5px 5px 5px 5px;
+	margin: 0 auto;
+
+	float: right;
+
+}
+
+/* Hack to stop highlighting posts
+   pushing down replies by a few pixels.*/
+.reply {
+	padding-bottom: 1px !important;
+}
+.reply.highlight {
+	padding-bottom: 0px !important;
 }
 
 /* Useless if we hide ads. */
 hr.abovePostForm {
+	display: none;
+}
+
+/* Honestly, why do you want any <hr>s at all? */
+hr {
 	display: none;
 }
 
@@ -54,13 +152,20 @@ div.thread > div.postContainer.replyContainer > div.sideArrows {
 	display: none;
 }
 
-/*--- STYLISATION ---*/
+div.thread > div.postContainer.replyContainer > div.post.reply.newPostsMarker {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	border-top: 2px solid #FF0000;
+}
+
+/*---/STYLISATION/---*/
 
 /*--- COLOURATION ---*/
 
 /* A nice white background for the page. */
 body {
-	background-color: #FCFCFC;
+	background-color: #FFFFFF;
 	background-image: none;
 }
 
